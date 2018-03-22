@@ -1,0 +1,150 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Fiddlehead</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    body {
+      background-color: black;
+      color: #d5deff;
+      font-family: monospace;
+      text-align: center;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .user_container {
+      grid-area: u;
+    }
+
+    .footer_container {
+      grid-area: foot;
+    }
+
+    .tr_container {
+      grid-area: tr;
+    }
+
+    .seq_container {
+      grid-area: seq;
+    }
+
+    .synth_container {
+      grid-area: synth;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+      "u"
+      "tr"
+      "seq"
+      "synth";
+      grid-gap: 2px;
+    }
+
+    @media (min-width: 500px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "u    u"
+        "tr   tr"
+        "seq  synth";
+      };
+    }
+
+    .synth_container {
+      display: grid;
+      grid-template-areas:
+      "osc osc"
+      "amp flt"
+      "lfo lfo"
+      "fx  fx";
+    }
+    .amp_ctrl_div {
+      grid-area: amp;
+    }
+    .flt_ctrl_div {
+      grid-area: flt;
+    }
+    .lfo_div {
+      grid-area: lfo
+    }
+    .fx_div {
+      grid-area: fx;
+    }
+  </style>
+</head>
+
+<body>
+
+  ~ F i d d l e h e a d ~
+  </div>
+  <div class="container" id="app" style="border: 1px solid #d5deff">
+    <div class="user_container" id="user_div" style="border: 1px solid #d5deff">
+      <div class="u_nm_div">Username</div>
+      <div class=song_nm_div>Song Name</div>
+      <div class=login_div>login</div>
+    </div>
+    <div class="tr_container" id="transport_div" style="border: 1px solid #d5deff">
+      <div>
+        Transport
+      </div>
+      <div class="timeline_cont">Timeline
+        <input type='range' />[current measure]
+        <div class=sq_tm_blk_div>
+          [seq] [seq] [seq] [seq]
+        </div>
+      </div>
+      <div class="tr_bt_cont">
+        <button>Prev</button>
+        <button>Stop</button>
+        <button>Play/Pause</button>
+        <button>Next</button>
+      </div>
+
+    </div>
+    <div class="seq_container" id="sequencer_div" style="border: 1px solid #d5deff">
+      <div>
+        Sequencer
+      </div>
+      <div class="seq_set_div">
+        seq_len <input type='range' />
+      </div>
+      <div class="seq_sl_div">
+        <input type="range" min="0" max="16" step="1" style="-webkit-appearance: slider-vertical; width: 1.5vw" />
+        <input type="range" min="0" max="16" step="1" style="-webkit-appearance: slider-vertical; width: 1.5vw" />
+        <input type="range" min="0" max="16" step="1" style="-webkit-appearance: slider-vertical; width: 1.5vw" />
+      </div>
+      Sequencer. sliders, selectors and info
+    </div>
+    <div class="synth_container" id="synth_div" style="border: 1px solid #d5deff">
+      <div>Synthesizer</div>
+      <div class="amp_ctrl_div">
+        <div>Amplifier</div>
+        <input type='range' />
+        <input type='range' />
+        <input type='range' />
+        <input type='range' />
+      </div>
+      <div class="flt_ctrl_div">
+        <div>Filter</div>
+        <input type='range' />
+        <input type='range' />
+        <input type='range' />
+        <input type='range' />
+      </div>
+      <div class="lfo_div"``>LFO
+        <input type='range' />
+      </div>
+      <div class="fx_div">Fx
+        <input type='range' />
+      </div>
+
+    </div>
+  </div>
+  footer goes here
+</body>
