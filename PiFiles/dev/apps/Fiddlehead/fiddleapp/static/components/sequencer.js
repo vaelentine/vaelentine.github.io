@@ -27,7 +27,7 @@ let v_seq = Vue.component('sequencer', {
         <div v-for="note in scale_notes" div class="cell" :note_name="note" :beat_number="beat" value="False">{{note}}</div>
       </div>
       <button @click="update_current_beat">update</button>
-      <div> current beat {{ update_current_beat() }}</div>
+      <div> current beat {{ current_beat }}</div>
     </div>
   </div>`,
   data() {
@@ -39,12 +39,12 @@ let v_seq = Vue.component('sequencer', {
       scale_notes: ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'],
       scale_types: ['Chromatic', 'Major', 'Minor'],
       scale_type_index: 0,
-      current_beat: 0
+      current_beat: player.beat,
     }
   },
   methods: {
     update_current_beat() {
-      console.log(player)
+
       // return player.beat;
      }
   }
