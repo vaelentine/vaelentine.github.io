@@ -1,0 +1,29 @@
+.sequencer_div {
+ background-color: white;
+}
+.sequence_settings {
+  display: flex;
+  flex-direction: row;
+}
+.matrix_div {
+  display: flex;
+}
+.leds_container {
+  display: flex;
+  flex-direction: row;
+}
+.each_led_container {
+  border: 2px solid black;
+  width: 30px;
+}
+.beat_container {
+  display: flex;
+  flex-direction: column;
+}
+.cell {
+  text-align: center;
+  width: 30px;
+  height: 16px;
+  background-color: green;
+  border: 2px solid black;
+}
